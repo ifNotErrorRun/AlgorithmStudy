@@ -1,4 +1,4 @@
-#딕셔너리 한번에 만들어주는 counter 생성자 사용
+#딕셔너리를 한번에 만들어주는 counter 생성자 사용
 from collections import Counter
 word_original = input()
 
