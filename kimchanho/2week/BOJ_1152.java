@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -9,6 +8,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class BOJ_1152 {
 
@@ -26,8 +26,10 @@ public class BOJ_1152 {
   public static void solution2(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    String[] words = br.readLine().trim().split(" ");
-    bw.write(String.valueOf(words.length));
+    List<String> words = Arrays.stream(br.readLine().split(" "))
+        .filter(s -> !s.isBlank())
+        .collect(Collectors.toList());
+    bw.write(String.valueOf(words.size()));
     bw.flush();
   }
 
