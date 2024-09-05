@@ -18,21 +18,30 @@ public class BOJ_2309 {
       arr[i] = Integer.parseInt(reader.readLine());
     }
     Deque<Integer> result = new ArrayDeque<>();
-    dfs(0, 7, arr, result);
+    dfs(0, arr, result);
     StringBuilder sb = new StringBuilder();
     result.stream().sorted().forEach(i -> sb.append(i).append("\n"));
     writer.write(sb.toString());
     writer.flush();
   }
 
-  public static void dfs(int start, int size, int[] arr, Deque<Integer> combination) {
+  public static boolean dfs(int start, int[] arr, Deque<Integer> combination) {
+    int sum = combination.stream().mapToInt(Integer::valueOf).sum();
+    if (combination.size() == 7 && sum == 100) {
+      return true;
+    } else if (combination.size() == 7) {
+      return false;
+    } else if (sum >= 100) {
+      return false;
+    }
+
     for (int i = start; i < arr.length; i++) {
-      combination.add(arr[i]);
-      if (combination.size() == 7 && combination.stream().mapToInt(Integer::valueOf).sum() == 100) {
-        return;
+      combination.offer(arr[i]);
+      if (dfs(i + 1, arr, combination)) {
+        return true;
       }
-      dfs(i + 1, size - 1, arr, combination);
       combination.pollLast();
     }
+    return false;
   }
 }
