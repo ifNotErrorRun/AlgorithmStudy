@@ -1,0 +1,11 @@
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# 입력값 읽기
+n = int(input().strip())  # 입력을 받아 정수로 변환
+
+# 팩토리얼 결과 출력
+print(factorial(n))
