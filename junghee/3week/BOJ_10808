@@ -1,0 +1,16 @@
+import sys
+
+# 입력 받기
+S = sys.stdin.readline().strip()
+
+# 알파벳 개수를 세기 위한 리스트 초기화 (a부터 z까지, 총 26개)
+alphabet_count = [0] * 26
+
+# 입력된 단어의 각 문자에 대해 알파벳 개수 세기
+for char in S:
+    # 'a'의 ASCII 값을 빼서 해당 알파벳의 인덱스를 구함
+    index = ord(char) - ord('a')
+    alphabet_count[index] += 1
+
+# 결과 출력 (공백으로 구분하여 출력)
+print(' '.join(map(str, alphabet_count)))
