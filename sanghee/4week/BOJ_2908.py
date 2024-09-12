@@ -1,5 +1,4 @@
-# https://www.acmicpc.net/problem/2908
-# feat: 상수 BOJ_2908.java
+# feat: 상수 BOJ_2908.py
 
 # import sys
 # a, b = map(int, sys.stdin.readline().split())
