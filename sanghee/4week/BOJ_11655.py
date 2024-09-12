@@ -1,8 +1,6 @@
 # https://www.acmicpc.net/problem/11655
 # feat: ROT13 BOJ_11655.py
 
-# 아스키코드 쓰면 금방일거 같은데? (대문자: 65~90, 소문자: 97~122)
-
 original = input()
 original_list = list(original)
 
