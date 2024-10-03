@@ -1,7 +1,7 @@
 # https://www.acmicpc.net/problem/2941
 # feat: 크로아티아 알파벳 BOJ_2941.py
 
-# 이거 그냥 특수 알파벳 기본 알파벳으로 변환하고 전체 갯수 세면 될거같음
+# 이거 그냥 특수 알파벳들 기본 알파벳(아무거나)로 변환하고 전체 갯수 세면 될거같음
 
 chr_alphabet = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="]
 word = input()
