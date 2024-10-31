@@ -26,24 +26,10 @@
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/saysuhyun">
-        <img src="https://avatars.githubusercontent.com/u/172836819?v=4" width="100px;" alt=""/>
-        <br />
-        <sub>최수현</sub>
-      </a>
-    </td>
-    <td align="center">
       <a href="https://github.com/ifNotErrorRun">
         <img src="https://avatars.githubusercontent.com/u/105318588?v=4" width="100px;" alt=""/>
         <br />
         <sub>김찬호</sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/totoro1009">
-        <img src="https://avatars.githubusercontent.com/u/176352066?v=4" width="100px;" alt=""/>
-        <br />
-        <sub>임정희</sub>
       </a>
     </td>
     <td align="center">
@@ -63,6 +49,33 @@
 
   </tr>
 </table>
+
+<br/>
+
+<details>
+  <summary><h4>이전 참여 멤버</h4></summary>
+
+  <div>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/saysuhyun">
+        <img src="https://avatars.githubusercontent.com/u/172836819?v=4" width="100px;" alt=""/>
+        <br />
+        <sub>최수현</sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/totoro1009">
+        <img src="https://avatars.githubusercontent.com/u/176352066?v=4" width="100px;" alt=""/>
+        <br />
+        <sub>임정희</sub>
+      </a>
+    </td>
+  </tr>
+</table>
+  </div>
+</details>
 
 <br/>
 
