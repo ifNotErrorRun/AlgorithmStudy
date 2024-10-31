@@ -510,8 +510,19 @@ gradle-app.setting
 
 # End of https://www.toptal.com/developers/gitignore/api/java,python,macos,intellij,gradle,node
 
-# common폴더 추가
-common/*
+
+
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
 
 # vscode 설정파일 무시
-.vscode/settings.json
+.vscode/*
+
+# common폴더 추가
+common/*
