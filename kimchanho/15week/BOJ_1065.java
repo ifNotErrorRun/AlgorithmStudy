@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.function.IntPredicate;
 import java.util.stream.IntStream;
 
 public class BOJ_1065 {
@@ -14,20 +15,22 @@ public class BOJ_1065 {
       System.out.println(99);
     } else {
       long result = IntStream.rangeClosed(111, n)
-          .filter(i -> {
-            int[] arr = Arrays.stream(String.valueOf(i).split(""))
-                .mapToInt(Integer::valueOf)
-                .toArray();
-            int size = arr[arr.length - 1] - arr[arr.length - 2];
-            for (int j = arr.length - 2; j > 0; j--) {
-              if (size != arr[j] - arr[j - 1]) {
-                return false;
-              }
-            }
-            return true;
-          })
+          .filter(isHanNumber)
           .count();
       System.out.println(result + 99);
     }
   }
+
+  public static IntPredicate isHanNumber = i -> {
+    int[] arr = Arrays.stream(String.valueOf(i).split(""))
+        .mapToInt(Integer::valueOf)
+        .toArray();
+    int size = arr[arr.length - 1] - arr[arr.length - 2];
+    for (int j = arr.length - 2; j > 0; j--) {
+      if (size != arr[j] - arr[j - 1]) {
+        return false;
+      }
+    }
+    return true;
+  };
 }
