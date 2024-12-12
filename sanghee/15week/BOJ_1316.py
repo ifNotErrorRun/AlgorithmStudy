@@ -1,26 +1,37 @@
 # feat: 그룹 단어 체커 BOJ_1316.py
+N = int(input())
+count = 0
 
-# 문제
-# 그룹 단어란 단어에 존재하는 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우만을 말한다. 
-# 예를 들면, ccazzzzbb는 c, a, z, b가 모두 연속해서 나타나고, 
-# kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, 
-# aabbbccb는 b가 떨어져서 나타나기 때문에 그룹 단어가 아니다.
+def IsGroup(char_list, word_length):
+  char_included = set()
 
-# 단어 N개를 입력으로 받아 그룹 단어의 개수를 출력하는 프로그램을 작성하시오.
+  if word_length == 0:
+    return True
 
-# 입력
-# 첫째 줄에 단어의 개수 N이 들어온다. N은 100보다 작거나 같은 자연수이다. 
-# 둘째 줄부터 N개의 줄에 단어가 들어온다. 단어는 알파벳 소문자로만 되어있고 중복되지 않으며, 
-# 길이는 최대 100이다.
+  for i in range(word_length):
+    i_word = char_list[i]
+    i_plus_one = char_list[i + 1]
 
-# 출력
-# 첫째 줄에 그룹 단어의 개수를 출력한다.
+    if i_word != i_plus_one and i_plus_one in char_included:
+      return False
+      break
 
-import sys
+    elif i == word_length - 1:
+      return True
 
-def IsGroup(word):
+    else:
+      char_included.add(i_word)
 
 
-N = int(sys.stdin.readline())
 for _ in range(N):
-    
+  word = input()
+  char_this = list(word)
+  length_this = len(char_this) - 1
+
+  if IsGroup(char_this, length_this):
+    count += 1
+
+print(count)
+
+# must write the FULL FUNCTION(with parameters) in conditions
+# when you want to decide it's passed or not, you can use True / False flags
