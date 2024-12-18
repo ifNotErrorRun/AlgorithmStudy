@@ -526,3 +526,8 @@ gradle-app.setting
 
 # common폴더 추가
 common/*
+
+# intellij custom
+out
+.idea
+Algorithm-Study.iml
