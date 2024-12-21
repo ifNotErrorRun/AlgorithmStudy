@@ -531,3 +531,8 @@ common/*
 node_modules/*
 pnpm-lock.yaml
 .pnpm
+
+# intellij custom
+out
+.idea
+Algorithm-Study.iml
