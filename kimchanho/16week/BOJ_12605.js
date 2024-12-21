@@ -10,6 +10,7 @@ const solution = (input) => {
   }
 };
 
+// setting for baekjoon online judge
 const inputArr = [];
 require("readline")
   .createInterface({ input: process.stdin, output: process.stdout })

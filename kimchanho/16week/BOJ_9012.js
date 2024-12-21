@@ -24,6 +24,7 @@ const isVPS = (input) => {
   console.log(stack.length === 0 ? "YES" : "NO");
 };
 
+// setting for baekjoon online judge
 const inputArr = [];
 require("readline")
   .createInterface({ input: process.stdin, output: process.stdout })
