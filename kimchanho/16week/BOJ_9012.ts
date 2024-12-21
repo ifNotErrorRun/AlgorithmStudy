@@ -4,7 +4,7 @@
  * @author Chanho Kim
  * @see https://www.acmicpc.net/problem/9012
  */
-const solution = (inputArr) => {
+const solution = (inputArr: string[]): void => {
   const N = Number(inputArr[0]);
   for (let i = 1; i <= N; i++) {
     const input = inputArr[i].split("");
@@ -12,15 +12,15 @@ const solution = (inputArr) => {
   }
 };
 
-const isVPS = (input) => {
-  const stack = [];
+const isVPS = (input: string[]): void => {
+  const stack: string[] = [];
 
   while (input.length) {
     const bracket = input.shift();
     // 여는 괄호면 스택에 추가
     if (bracket === "(") {
       stack.push(bracket);
-    // 닫는 괄호면 스택에서 제거
+      // 닫는 괄호면 스택에서 제거
     } else {
       // 스택이 비어있으면 올바르지 않은 괄호 문자열이므로 NO 출력 후 종료
       if (stack.length === 0) {
@@ -35,8 +35,8 @@ const isVPS = (input) => {
 };
 
 // setting for baekjoon online judge
-const inputArr = [];
+const inputArr: string[] = [];
 require("readline")
   .createInterface({ input: process.stdin, output: process.stdout })
-  .on("line", (line) => inputArr.push(line))
+  .on("line", (line: string) => inputArr.push(line))
   .on("close", () => solution(inputArr));

@@ -4,7 +4,7 @@
  * @author Chanho Kim
  * @see https://www.acmicpc.net/problem/17608
  */
-const solution = (inputArr) => {
+const solution = (inputArr: string[]): void => {
   const stack = inputArr.slice(1).map(Number);
   let max = 0;
   let count = 0;
@@ -20,8 +20,8 @@ const solution = (inputArr) => {
 };
 
 // setting for baekjoon online judge
-const inputArr = [];
+const inputArr: string[] = [];
 require("readline")
   .createInterface({ input: process.stdin, output: process.stdout })
-  .on("line", (line) => inputArr.push(line))
+  .on("line", (line: string) => inputArr.push(line))
   .on("close", () => solution(inputArr));

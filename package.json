@@ -1,0 +1,13 @@
+{
+  "name": "algorithm-study",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
