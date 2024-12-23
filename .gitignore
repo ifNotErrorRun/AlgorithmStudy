@@ -535,3 +535,6 @@ node_modules/*
 out
 .idea
 Algorithm-Study.iml
+
+# Mac OS
+.DS_Store
