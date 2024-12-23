@@ -529,7 +529,6 @@ common/*
 
 # pnpm 패키지 무시
 node_modules/*
-pnpm-lock.yaml
 .pnpm
 
 # intellij custom
