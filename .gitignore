@@ -527,6 +527,11 @@ gradle-app.setting
 # common폴더 추가
 common/*
 
+# pnpm 패키지 무시
+node_modules/*
+pnpm-lock.yaml
+.pnpm
+
 # intellij custom
 out
 .idea
