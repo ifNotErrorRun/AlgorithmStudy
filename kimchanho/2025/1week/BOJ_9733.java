@@ -8,29 +8,24 @@ import java.io.*;
  * @see https://www.acmicpc.net/problem/9733
  */
 public class BOJ_9733 {
-  
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     Map<String, Integer> map = new HashMap<>();
 
     String input;
+    // 입력이 끝날 때까지 반복
     while ((input = br.readLine()) != null) {
-      String[] arr = input.split(" ");
-      for (String s : arr) {
-        map.put(s, map.getOrDefault(s, 0) + 1);
-      }
+      Arrays.stream(input.split(" "))
+          .forEach(s -> map.put(s, map.getOrDefault(s, 0) + 1));
     }
 
     int total = map.values().stream().mapToInt(Integer::valueOf).sum();
 
     String[] turn = {"Re", "Pt", "Cc", "Ea", "Tb", "Cm", "Ex"};
     for (String t : turn) {
-      if (map.containsKey(t)) {
-        double percent = (double) map.get(t) / total;
-        System.out.println(t + " " + map.get(t) + " " + String.format("%.2f", percent));
-      } else {
-        System.out.println(t + " 0 0.00");
-      }
+      double percent = (double) map.getOrDefault(t, 0) / total;
+      // 소수점 둘째 자리까지 출력
+      System.out.println(t + " " + map.getOrDefault(t, 0) + " " + String.format("%.2f", percent));
     }
     System.out.println("Total " + total + " 1.00");
   }
