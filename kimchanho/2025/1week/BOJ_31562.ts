@@ -1,6 +1,6 @@
 /**
  * @title 전주 듣고 노래 맞히기 (31562)
- * @description
+ * @description 노래의 코드를 입력받아 노래 제목을 출력하는 문제
  * @author Chanho Kim
  * @see https://www.acmicpc.net/problem/31562
  */
