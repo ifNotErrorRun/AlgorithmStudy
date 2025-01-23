@@ -3,6 +3,12 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+/**
+ * @title 콰트로치즈피자 (27964)
+ * @description 각기 다른 치즈토핑이 4개 이상이면 yummy, 아니면 sad
+ * @author Chanho Kim
+ * @see https://www.acmicpc.net/problem/27964
+ */
 public class BOJ_27964 {
 
   public static void main(String[] args) throws Exception {
