@@ -1,0 +1,51 @@
+def count_vaild_combo(input_char: str) -> bool:
+    """
+    입력된 기술이 유효한 기술인지 확인하는 함수
+
+    Args:
+        input_char (str): 입력된 기술
+
+    Returns:
+        int: 기술의 종류에 따른 정수값
+            - 1~9     : True
+            - L, S    : False(사전기술)
+            - R, K    : True(유효한 본기술)
+
+    Raises:
+        입력값이 유효하지 않으면(dict에 해당하는 key가 없을 경우) 예외발생
+    """
+    # 입력은 정상계(숫자의 입력은 1~9만 들어옴)라고 가정하고
+    # 입력된 기술이 digit string이면 일단 무조건 True를 반환함
+    if input_char.isdigit():
+        return True
+    try:
+        if SKILL_LIST[prev_skill] == input_char:
+            return True
+        # 이건 짝이 맞지않는 사전기술-본기술 입력때 의도적으로 일으키는 예외
+        else:
+            raise ValueError
+    except KeyError:
+        return False
+
+
+# n은 파이썬에서는 필요가 없을듯
+# input으로 성능에 크게 영향을 끼칠 것 같진 않으니까 그냥 input()으로...
+n = input()
+line = input()
+# 유효한 기술 수
+count = 0
+prev_skill = ""
+# 사전기술과 본기술의 dict
+SKILL_LIST = {"L": "R", "S": "K"}
+
+for char in line:
+    try:
+        flag = count_vaild_combo(char)
+    except ValueError:
+        print(count)
+        exit(0)
+    if flag:
+        count += 1
+    if char in SKILL_LIST.keys():
+        prev_skill = char
+print(count)
