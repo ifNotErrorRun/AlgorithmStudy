@@ -1,0 +1,24 @@
+import sys
+from collections import deque
+
+
+def find_loser(hand_position: deque[int], bj: list[int]) -> list[int]:
+    losers = []
+    index = 0
+    # 교선이가 부르는 숫자만큼 루프
+    for call in bj:
+        index = (index + call - 1) % len(hand_position)
+        losers.append(hand_position[index])
+    return losers
+
+
+ip = sys.stdin.readline
+
+n = int(ip())
+t = int(ip())
+hand_position = deque(list(map(int, ip().split())))
+bj = list(map(int, ip().split()))
+
+losers = find_loser(hand_position, bj)
+
+print(" ".join(map(str, losers)))
