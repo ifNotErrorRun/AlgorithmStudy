@@ -43,13 +43,6 @@
         <sub>임성국</sub>
       </a>
     </td>
-    <td align="center">
-      <a href="https://github.com/GunilPark">
-        <img src="https://avatars.githubusercontent.com/u/99588302?v=4" width="100px;" alt=""/>
-        <br />
-        <sub>박건일</sub>
-      </a>
-    </td>
 
   </tr>
 </table>
