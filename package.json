@@ -1,6 +1,7 @@
 {
   "name": "algorithm-study",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "",
   "engines": {
     "node": ">=22.0.0"
