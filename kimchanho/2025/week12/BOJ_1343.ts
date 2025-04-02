@@ -7,7 +7,7 @@ let replaced: string[] = [];
 let lp = 0;
 let rp = 0;
 
-// 오른쪽 포인터값이 문자열 길이보다 작으면 반복
+// 오른쪽 포인터값이 문자열 길이보다 작거나 같으면 반복
 while (rp <= str.length) {
   const char = str.charAt(rp);
 
