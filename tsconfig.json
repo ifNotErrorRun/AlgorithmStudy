@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "module": "CommonJS"
   },
   "include": ["./**/*.ts"]
 }
