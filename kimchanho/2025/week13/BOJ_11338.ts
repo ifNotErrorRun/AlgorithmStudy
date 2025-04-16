@@ -1,6 +1,6 @@
 /**
  * @title 문자열 (11338)
- * @description A, B문자열이 주어지고 A와 B문자열 길이를 같게 만들 때 문자의 차이를 최소하하기
+ * @description A, B문자열이 주어지고 A��� B문자열 길이를 같게 만들 때 문자의 차이를 최소화하기
  * @author Chanho Kim
  * @see https://www.acmicpc.net/problem/11338
  */
